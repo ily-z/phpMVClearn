@@ -1,6 +1,6 @@
 <?php
  
- define("BASEURL","http://localhost/mvcphp/public");
+ define("BASEURL","http://localhost/phpMVClearn/public");
 
  //databasse
  define("DB_HOST","localhost");
