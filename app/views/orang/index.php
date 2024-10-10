@@ -7,14 +7,32 @@
             ?>
         </div>
     </div>
+
+    <!-- Button trigger modal -->
     <div class="row">
         <div class="col-lg-6">
-            <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary mt-3 mb-4 tambahDataOrang" id='labelTambah'data-toggle="modal" data-target="#formmodal">
             Tambah Data Orang
             </button>
-            <h3>daftar orang</h3>
+        </div>
+    </div> 
 
+    <div class="row mb-3">
+        <div class="col-lg-6">
+            <form action="<?= BASEURL;?>/Orang/cari" method="post">
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" placeholder="cari orang di sini" aria-label="Recipient's username" aria-describedby="basic-addon2" name="keyword" id="keyword" autocomplete="off">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="submit" id="tombolCari">cari</button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>daftar orang</h3
             <ul class="list-group">
 
                 <?php foreach( $data['orang'] as $orang):?>

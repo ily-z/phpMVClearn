@@ -88,4 +88,13 @@ class Orang_model{
         return $this->db->rowCount();
     }
 
+    public function cariDataOrang(){
+        $keyword=$_POST['keyword'];
+        //var_dump($keyword);
+        $query='SELECT * FROM data_orang WHERE nama LIKE :keyword';
+        $this->db->query($query);
+        $this->db->bind('keyword',"%$keyword%");
+        return $this->db->resultSet();
+    }
+
 }

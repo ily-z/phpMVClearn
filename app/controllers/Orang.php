@@ -67,5 +67,14 @@ class Orang extends Controller{
             exit;
         }
     }
+
+    public function cari(){
+        $data['halaman']='cari orang';
+        $data['judul']='data orang yang di cari';
+        $data['orang']=$this->model('Orang_model')->cariDataOrang($_POST);
+        $this->view('templates/header',$data);
+        $this->view('orang/index',$data);
+        $this->view('templates/footer');
+    }
 }
 
